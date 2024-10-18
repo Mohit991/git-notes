@@ -181,6 +181,26 @@ Modify file1 and commit in one go.
 Use command `git commit -a -m "This is direct commit"`, here -a means all and -m means message.  
 Or you can combine them:  `git commit -am "This is direct commit"`.  
 
+We can remove/delete a file from the working directory/folder as well as the staging area using this command:  
+`git rm <file_name/s>`  
+
+### Renaming or moving files
+If we move or rename a file, we have to add them again using `git add` command.  
+Or git also gives us a command: 
+`git mv <old_file_name> <new_file_name>`  
+This command will rename file in both directory and staging area.  
+After this command the file will be renamed and added to the staging. We only need to commit changes after this.  
+
+### Ignoring files or .gitignore file
+We want to ignore files such as log files etc from committing to the repo.  
+We can create a .gitignore file in our directory. We can put files names or folder names in this file. These files and folders will be ignored by git for tracking and committing.  
+_Note: If you are already tracking a file and later on you add that file to .gitignore file then git is not going to ignore that._  
+
+
+
+
+
+
 
 
 
