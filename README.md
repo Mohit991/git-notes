@@ -71,14 +71,14 @@ We need to specify below settings:
    Command: `git config --global core.editor "code --wait"`
 
 4. End of Line: In windows end of line is marked in two ways. Line feed and carriage return.
-   In Mac and linux, end of line are indicated with line feeds.
-      <img width="473" alt="{3334273A-DFBB-47D2-9669-C56C49A2E7CA}" src="https://github.com/user-attachments/assets/740e27ea-dde0-4610-a424-2d50137b16aa">
+   In Mac and linux, end of line are indicated with line feeds.<br>
+      <img width="473" alt="{3334273A-DFBB-47D2-9669-C56C49A2E7CA}" src="https://github.com/user-attachments/assets/740e27ea-dde0-4610-a424-2d50137b16aa"><br><br>
 
-   We need to set property called `core.autocrlf`.
-      <img width="468" alt="{FDC25E64-2EE9-426A-9CC4-4CA738F24AF1}" src="https://github.com/user-attachments/assets/4f1edbba-b5fc-47b0-acdb-e3928c91806b">
+   We need to set property called `core.autocrlf`.<br>
+      <img width="468" alt="{FDC25E64-2EE9-426A-9CC4-4CA738F24AF1}" src="https://github.com/user-attachments/assets/4f1edbba-b5fc-47b0-acdb-e3928c91806b"><br><br>
 
-  Command: For windows: `git config --global core.autocrlf input`
-           For Mac and Linux: `git config --global core.autocrlf true`
+  Command: For windows:<br> `git config --global core.autocrlf input`
+           For Mac and Linux:<br> `git config --global core.autocrlf true`<br><br>
 
 The --global option allows you to configure settings that apply to all repositories you work with on your system. These settings are stored in a .gitconfig file in your home directory.  
 We can edit the .gitconfig file using below command:  
