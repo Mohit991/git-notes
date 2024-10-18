@@ -72,10 +72,10 @@ We need to specify below settings:
 
 4. End of Line: In windows end of line is marked in two ways. Line feed and carriage return.
    In Mac and linux, end of line are indicated with line feeds.
-   <img width="473" alt="{3334273A-DFBB-47D2-9669-C56C49A2E7CA}" src="https://github.com/user-attachments/assets/740e27ea-dde0-4610-a424-2d50137b16aa">
+      <img width="473" alt="{3334273A-DFBB-47D2-9669-C56C49A2E7CA}" src="https://github.com/user-attachments/assets/740e27ea-dde0-4610-a424-2d50137b16aa">
 
    We need to set property called `core.autocrlf`.
-   <img width="468" alt="{FDC25E64-2EE9-426A-9CC4-4CA738F24AF1}" src="https://github.com/user-attachments/assets/4f1edbba-b5fc-47b0-acdb-e3928c91806b">
+      <img width="468" alt="{FDC25E64-2EE9-426A-9CC4-4CA738F24AF1}" src="https://github.com/user-attachments/assets/4f1edbba-b5fc-47b0-acdb-e3928c91806b">
 
   Command: For windows: `git config --global core.autocrlf input`
            For Mac and Linux: `git config --global core.autocrlf true`
