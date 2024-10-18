@@ -96,6 +96,141 @@ Command: `mkdir <folder_name/directory_name>`
 Getting into this directory.  
 Command: `cd <folder_name/directory_name>`  
 
+## Initilize Repository
+Command: `git init`  
+Result:  
+<img width="660" alt="{9C67759D-DA8E-4A8C-94FA-866C3222FAEC}" src="https://github.com/user-attachments/assets/85895155-6fc6-46b9-8e08-4a68bdf6406f">  
+
+Git stores info about the repo inside this folder which is hidden by default.  
+Inside this folder:  
+<img width="659" alt="{2BFDEB11-CB23-41FF-BF72-FA3913624B14}" src="https://github.com/user-attachments/assets/c8d08923-a0a1-4d4a-855e-37a1bf807fcf">  
+
+## Basic Git Workflow
+We first make changes to our project. We modify some files. When our project reaches a state which we want to record, we commit those changes into our repo. This is a **commit**. 
+Creating a commit means taking a snapshot of our project.  
+**Staging area** is the place where we will place our files which we are going to commit.  
+Staging area will help us review our changes before making a commit.  
+We have a couple of files in our repo.  
+<img width="372" alt="{A6C7B550-8863-4103-9FF3-94E4CD9A3B37}" src="https://github.com/user-attachments/assets/f0cb7fa0-ec85-46bf-bed1-f86d78839bdf">  
+
+We add these files to the staging area by using the add command.  
+<img width="364" alt="{E3A28894-4862-43D9-8F41-709F8F2F24FD}" src="https://github.com/user-attachments/assets/e95e42c8-3966-4472-8ac8-24cc9c9332d1">  
+
+<img width="344" alt="{401BC360-5C69-4120-AD50-DFD30995392D}" src="https://github.com/user-attachments/assets/c19e63ec-3a5e-4eea-a570-261eeb661c7f">  
+
+This is the state we are proposing for the next commit.  
+Then we use the commit command to permanently store these files on git repo.  
+<img width="353" alt="{9FCF1D01-D65B-4B38-968E-4ECA9A5422A5}" src="https://github.com/user-attachments/assets/2ec7135b-c752-4789-bb2c-7645d2a0f725">  
+
+We also supply a meaningful message.  
+In the history, we can see all the commits.  
+<img width="281" alt="{DC839974-B6B9-4503-9190-0C8E54D37FFF}" src="https://github.com/user-attachments/assets/a7612c2c-b7f8-44df-a396-6884761feb7c">  
+
+Now, we make changes to file1 to fix some error. We add the file using add command.  
+<img width="337" alt="{FF1E0D87-EFB5-4C3B-AD4C-E181CC63C6FE}" src="https://github.com/user-attachments/assets/85eb9452-7cbd-433d-8856-c2bcc09ac918">  
+
+We now commit these changes to the repo using the commit command.  
+<img width="349" alt="{518DD660-511A-4DD1-B998-98FD7CFEF599}" src="https://github.com/user-attachments/assets/aaac47ba-b721-4413-a94a-32b918e446e3">  
+
+Each commit in git will have these details:  
+<img width="271" alt="{53CCEEF9-E46D-4F1B-892F-FE504ED2359C}" src="https://github.com/user-attachments/assets/7e5c86ff-85c2-44af-bced-d6236009bf92">  
+
+Git stores complete content of our project.  
+<img width="399" alt="{C45723AE-BA58-4117-86C5-82F99638F186}" src="https://github.com/user-attachments/assets/180ef6c8-ffac-4cb7-b9b3-20df29a1f51c">  
+
+### Staging Stages
+Use `git status` to get the latest status of the git repo.  
+<img width="609" alt="{B3B4DB07-C0F2-44C1-B89B-578F2D922D1A}" src="https://github.com/user-attachments/assets/2dc77970-335c-47a8-b256-7bfa4f2d7787">  
+
+We have two untracked files. file1 and file2.  
+They are red because they are not being tracked yet.  
+To add to staging area, we use `git add file1.txt file2.txt` or we can use `git add .` to add all files recursively.  
+See the screenshot:  
+<img width="587" alt="{E37D2741-E6D3-4A76-8D37-A52A41932828}" src="https://github.com/user-attachments/assets/35ea09ca-fea5-483f-843e-6d9b9e9d3523">  
+
+Let us modify file1 and see what happens:  
+Let us see the git status after modifing file1:  
+<img width="520" alt="{6A527778-E386-4C66-A5A7-B4851C832953}" src="https://github.com/user-attachments/assets/5dc57aea-a50c-4741-861e-5b9c3c79e4b8">  
+
+file1 has changes not staged yet.  
+<img width="336" alt="{CF5E534A-2D4F-45EB-AE97-773F6A775A25}" src="https://github.com/user-attachments/assets/6492fb7d-f8cc-4bb0-9347-2c5876d68670">  
+
+Let us use `git add file1` or `git add .` to add latest file1 to staging area.  
+Git status:  
+<img width="483" alt="{C9D1B3F7-80EE-42FC-B611-9BBB9D9EFE4B}" src="https://github.com/user-attachments/assets/233a495d-3c70-4cb4-90ad-dcfa1b2f86a1">  
+
+### Commiting Changes  
+Use commit command to commit changes:  
+`git commit -m "Initial Commit"` or use `git commit`, the second command opens up a commit message file, where we can write longer commit messages.  
+<img width="922" alt="{11BC9F8D-6AF8-44A7-9B7C-BAAB80F4D7A7}" src="https://github.com/user-attachments/assets/b66122a4-8b76-4945-afbf-89f52873d2a9">  
+
+<img width="472" alt="{67A4D9EF-4460-48D3-BB33-D01433B82080}" src="https://github.com/user-attachments/assets/a216cc31-fb1a-461c-943a-754a822617cd">  
+
+### Commiting Best Practices
+<img width="469" alt="{ED623B89-042E-449F-8ADA-BDB952AC1860}" src="https://github.com/user-attachments/assets/6235b40b-fb1d-4b4a-8231-97e55698f28b">  
+
+<img width="471" alt="{F1036261-756B-4994-A5AD-FB7D0291E201}" src="https://github.com/user-attachments/assets/d2529b2f-bb4e-4224-ba70-99a2ec81661e">  
+
+Two commits for two different things:  
+<img width="472" alt="{EA6400CC-19E1-4345-9A3C-FF4F790D6166}" src="https://github.com/user-attachments/assets/bb94653e-0dba-4399-86c3-01947933fbdf">  
+
+Meaningful commit messages.  
+
+### Skipping Staging Area
+Modify file1 and commit in one go.  
+Use command `git commit -a -m "This is direct commit"`, here -a means all and -m means message.  
+Or you can combine them:  `git commit -am "This is direct commit"`.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
