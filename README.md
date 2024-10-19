@@ -196,6 +196,73 @@ We want to ignore files such as log files etc from committing to the repo.
 We can create a .gitignore file in our directory. We can put files names or folder names in this file. These files and folders will be ignored by git for tracking and committing.  
 _Note: If you are already tracking a file and later on you add that file to .gitignore file then git is not going to ignore that._  
 
+### Git Short Status
+Command: `git status -s`  
+![image](https://github.com/user-attachments/assets/d909e4f2-4d36-459c-bfc3-4a59663be74d)  
+
+M means modified. 
+A means added.  
+
+### Viewing Staged and Unstaged Changes
+git status just shows the files modified etc. It does not show us the exact changes.  
+To see the staged changes:  
+`git diff --staged`  
+![image](https://github.com/user-attachments/assets/2f7de1c2-cc29-452b-8de4-c81035ba7f28)  
+
+To see the unstaged changes:  
+`git diff`  
+
+These commands will show us the changes in the command line. This is not really helpful.  
+If we want to see the changes visually in vscode or some other editor, we cam use below command.  
+For staging area:
+`git difftool --staged`  
+For unstaged:  
+`git difftool`  
+But you must configure the difftool to vscode first in the .gitconfig file.  
+
+### Viewing Commits  
+Command: `git log`  
+![image](https://github.com/user-attachments/assets/fb00aa00-3453-4bf9-8e94-708c79bf62d8)  
+
+Press space to go to the next page and q to quit.  
+Command: `git log --oneline`  
+This will get you each commit in a single line.  
+
+### Viewing a Specific Commit  
+Command: `git show <commit_id>` or  
+`git show HEAD`, to show the latest commit or  
+`git show HEAD~<number>`, number means commit how many commits before the latest commit.  
+If you want to see a specific file's content in a specific commit, use command:  
+`git show <commit_id or HEAD or HEAD~<number>>:<file_namme>`  
+
+To see all the files in a commit:  
+`git ls-tree <commit_id or HEAD or HEAD~<number>>`  
+![image](https://github.com/user-attachments/assets/9bee2949-4f9e-4edc-83e9-00401bc843d7)  
+
+blob means file and tree means a directory.  
+
+### Unstaging Files
+Command: `git restore --staged <file_name/s>`  
+To remove a file or files from the staging area. 
+To remove all files from the staging area: `git restore --staged .`  
+
+### Discarding our changes
+Command: `git restore .` or  `git restore <file_name/s>`  
+This will remove our changes and move the files back to the previous version.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
